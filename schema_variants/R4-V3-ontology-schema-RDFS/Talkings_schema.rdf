@@ -1,0 +1,745 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semantika.lt/ns/Talkings#"
+     xml:base="http://semantika.lt/ns/Talkings"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:events="http://semantika.lt/ns/Events#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Talkings">
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Talkings"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Events"/>
+        <dc:contributor xml:lang="en">Kaunas University of Technology, Department of Information Systems</dc:contributor>
+        <terms:title xml:lang="lt">Kalbėjimų ontologija</terms:title>
+        <terms:title xml:lang="en">Talkings Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">talkings</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri xml:lang="lt">http://semantika.lt/ns/Talkings</vann:preferredNamespaceUri>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.semantika.lt/ontology/Talkings_schema.rdf</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#agreed__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#agreed__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#agreed__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#agreed__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#asked__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#asked__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#asked__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#asked__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#avowed__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#avowed__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#avowed__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#avowed__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#commented__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#commented__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#commented__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#commented__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#complained__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#complained__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#complained__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#complained__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#confirmed__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#confirmed__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#confirmed__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#confirmed__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#decided__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#decided__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#decided__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#decided__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#defended__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#defended__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#defended__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#defended__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dictated__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#dictated__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dictated__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#dictated__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#disputed__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#disputed__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#disputed__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#disputed__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#doubted__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#doubted__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#doubted__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#doubted__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emphasized__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#emphasized__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emphasized__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#emphasized__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#ironized__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#ironized__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#ironized__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#ironized__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#lied__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#lied__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#lied__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#lied__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#mentioned__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#mentioned__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#mentioned__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#mentioned__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#negated__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#negated__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#negated__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#negated__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#notified__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#notified__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#notified__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#notified__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#obligated__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#obligated__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#obligated__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#obligated__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#persuaded__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#persuaded__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#persuaded__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#persuaded__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#pleaded__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#pleaded__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#pleaded__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#pleaded__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#predicted__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#predicted__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#predicted__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#predicted__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#promised__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#promised__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#promised__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#promised__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reasoned__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#reasoned__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reasoned__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#reasoned__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#referred__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#referred__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#referred__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#referred__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#refused__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#refused__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#refused__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#refused__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#regretted__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#regretted__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#regretted__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#regretted__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#replied__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#replied__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#replied__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#replied__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#requested__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#requested__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#requested__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#requested__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#said__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#said__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#said__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#said__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#stated__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#stated__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#stated__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#stated__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#suggested__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#suggested__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#suggested__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#suggested__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#supplemented__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#supplemented__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#supplemented__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#supplemented__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked__substance">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Events#substance"/>
+        <rdfs:label xml:lang="lt">kalbėjime pasakė turinį</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked__talking">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Agents#agent"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:label xml:lang="lt">asmuo pasakė kalbėjimą</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_emotionally__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_emotionally__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_emotionally__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_emotionally__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_fast__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_fast__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_fast__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_fast__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_politely__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_politely__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_politely__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_politely__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_slowly__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_slowly__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_slowly__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_slowly__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_unknown__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_unknown__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked_unknown__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked_unknown__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#thanked__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#thanked__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#thanked__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#thanked__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#warned__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#warned__substance">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#warned__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#warned__talking">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Talkings#talked__talking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#year -->
+
+    <owl:DatatypeProperty rdf:about="http://semantika.lt/ns/Talkings#year">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Events#event"/>
+        <rdfs:label xml:lang="lt">kalbėjimas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#end_moment">
+        <rdfs:label xml:lang="lt">pabaigos momentas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#start_moment">
+        <rdfs:label xml:lang="lt">pradžios momentas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#time_moment">
+        <rdfs:label xml:lang="lt">laiko momentas</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

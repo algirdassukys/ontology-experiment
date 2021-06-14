@@ -1,0 +1,1311 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semantika.lt/ns/Talkings#"
+     xml:base="http://semantika.lt/ns/Talkings"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:events="http://semantika.lt/ns/Events#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Talkings">
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Talkings"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Events"/>
+        <dc:contributor xml:lang="en">Kaunas University of Technology, Department of Information Systems</dc:contributor>
+        <terms:title xml:lang="lt">Kalbėjimų ontologija</terms:title>
+        <terms:title xml:lang="en">Talkings Ontology</terms:title>
+        <vann:preferredNamespacePrefix>talkings</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://semantika.lt/ns/Talkings</vann:preferredNamespaceUri>
+        <rdfs:isDefinedBy xml:lang="en">http://www.semantika.lt/ontology/Talkings_schema.rdf</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#has__talking_manner -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#has__talking_manner">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Events#has__state_of_affairs_type"/>
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Talkings#talking_manner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#has__talking_type -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#has__talking_type">
+        <rdfs:subPropertyOf rdf:resource="http://semantika.lt/ns/Events#has__state_of_affairs_type"/>
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">įvykis turi kalbėjimo tipą</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked__substance">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Events#substance"/>
+        <rdfs:label xml:lang="lt">kalbėjime pasakė turinį</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked__talking">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Agents#agent"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:label xml:lang="lt">asmuo pasakė kalbėjimą</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#year -->
+
+    <owl:DatatypeProperty rdf:about="http://semantika.lt/ns/Talkings#year">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#agreement -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#agreement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#agreement_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#avowal -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#avowal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#avowal_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#comment -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#comment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#comment_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#complaint -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#complaint">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#complaint_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#confirmation -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#confirmation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#confirmation_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#decision -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#decision">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#decision_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#defensive -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#defensive">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#defensive_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dictate -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#dictate">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#dictate_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dispute -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#dispute">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#dispute_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#doubt -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#doubt">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#doubt_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emotional_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#emotional_talking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_manner"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#emotional_talking_manner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emphasis -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#emphasis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#emphasis_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#falsehood -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#falsehood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#falsehood_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#fast_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#fast_talking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_manner"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#fast_talking_manner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#irony -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#irony">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#irony_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#mention -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#mention">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#mention_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#negation -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#negation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#negation_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#notification -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#notification">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#notification_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#obligation -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#obligation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#obligation_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#other -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#other">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#other_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#persuasion -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#persuasion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#persuasion_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#plead -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#plead">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#plead_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#polite_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#polite_talking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_manner"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#polite_talking_manner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#prediction -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#prediction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#prediction_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#promise -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#promise">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#promise_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#question -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#question">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#question_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reasoning -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#reasoning">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#reasoning_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#referral -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#referral">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#referral_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#refusal -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#refusal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#refusal_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#regret -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#regret">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#regret_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reply -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#reply">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#reply_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#request -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#request">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#request_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#saying -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#saying">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#saying_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#slow_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#slow_talking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_manner"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#slow_talking_manner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#statement -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#statement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#statement_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#stormy_saying -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#stormy_saying">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#stormy_saying_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#suggestion -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#suggestion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#suggestion_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#supplement -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#supplement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#supplement_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Events#event"/>
+        <rdfs:label xml:lang="lt">kalbėjimas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talking_manner -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#talking_manner">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Events#event_type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talking_type -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#talking_type">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Events#event_type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#thanks -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#thanks">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#thanks_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#unknown_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#unknown_talking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_manner"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#unknown_talking_manner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#warning -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#warning">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantika.lt/ns/Talkings#talking"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semantika.lt/ns/Talkings#has__talking_type"/>
+                        <owl:hasValue rdf:resource="http://semantika.lt/ns/Talkings#warning_talking_type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#agreement_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#agreement_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Pritarimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#avowal_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#avowal_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Prisipažinimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#comment_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#comment_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Komentaro kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#complaint_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#complaint_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Skundimosi kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#confirmation_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#confirmation_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Patvirtinimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#decision_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#decision_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Nusprendimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#defensive_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#defensive_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Gynybos kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dictate_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#dictate_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Įsakymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dispute_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#dispute_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Ginčo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#doubt_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#doubt_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Abejojimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emotional_talking_manner -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#emotional_talking_manner">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_manner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emphasis_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#emphasis_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Akcentavimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#falsehood_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#falsehood_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Melavimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#fast_talking_manner -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#fast_talking_manner">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_manner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#irony_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#irony_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Ironijos kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#mention_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#mention_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Minėjimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#negation_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#negation_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Paneigimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#notification_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#notification_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Informavimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#obligation_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#obligation_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Įsipareigojimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#other_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#other_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#persuasion_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#persuasion_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Įtikinėjimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#plead_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#plead_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Teisinimosi kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#polite_talking_manner -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#polite_talking_manner">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_manner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#prediction_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#prediction_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Spėjimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#promise_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#promise_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Pažado kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#question_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#question_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Klausimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reasoning_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#reasoning_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Samprotavimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#referral_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#referral_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Kreipimosi kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#refusal_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#refusal_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Atsisakymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#regret_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#regret_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Apgailestavimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reply_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#reply_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Atsakymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#request_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#request_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Prašymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#saying_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#saying_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Sakymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#slow_talking_manner -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#slow_talking_manner">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_manner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#statement_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#statement_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Teigimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#stormy_saying_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#stormy_saying_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Audringo sakymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#suggestion_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#suggestion_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Patarimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#supplement_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#supplement_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Papildymo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#thanks_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#thanks_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Padėkos kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#unknown_talking_manner -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#unknown_talking_manner">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_manner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#warning_talking_type -->
+
+    <owl:NamedIndividual rdf:about="http://semantika.lt/ns/Talkings#warning_talking_type">
+        <rdf:type rdf:resource="http://semantika.lt/ns/Talkings#talking_type"/>
+        <rdfs:label xml:lang="lt">Perspėjimo kalbėjimo tipas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#end_moment">
+        <rdfs:label xml:lang="lt">pabaigos momentas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#start_moment">
+        <rdfs:label xml:lang="lt">pradžios momentas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#time_moment">
+        <rdfs:label xml:lang="lt">laiko momentas</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

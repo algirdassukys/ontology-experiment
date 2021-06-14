@@ -1,0 +1,54 @@
+// agreement
+agent agreed talking
+	General_concept: agent talked talking
+talking agreed substance
+	General_concept: talking talked substance
+agent agreed substance
+	General_concept: agent talked substance
+	Definition: agent agreed talking that agreed substance
+
+// confirmation
+agent confirmed talking
+	General_concept: agent talked talking
+talking confirmed substance
+	General_concept: talking talked substance
+agent confirmed substance
+	General_concept: agent talked substance
+	Definition: agent confirmed talking that confirmed substance
+
+// request
+agent requested substance
+	General_concept: agent talked substance
+	Definition: agent requested talking that requested substance
+talking requested substance
+	General_concept: talking talked substance
+agent requested talking
+	General_concept: agent talked talking
+
+
+// emotional talking
+agent talked_emotionally talking
+	General_concept: agent talked talking
+talking talked_emotionally substance
+	General_concept: talking talked substance
+agent talked_emotionally substance
+	General_concept: agent talked substance
+	Definition: agent talked_emotionally talking that talked_emotionally substance 
+
+// fast talking
+agent talked_fast talking
+	General_concept: agent talked talking
+talking talked_fast substance
+	General_concept: talking talked substance
+agent talked_fast substance
+	General_concept: agent talked substance
+	Definition: agent talked_fast talking that talked_fast substance
+
+// polite talking
+agent talked_politely talking
+	General_concept: agent talked talking
+talking talked_politely substance
+	General_concept: talking talked substance
+agent talked_politely substance
+	General_concept: agent talked substance
+	Definition: agent talked_politely talking that talked_politely substance

@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semantika.lt/ns/Talkings#"
+     xml:base="http://semantika.lt/ns/Talkings"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:semlt="http://semantika.lt/ns/SemLT#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:agents="http://semantika.lt/ns/Agents#"
+     xmlns:events="http://semantika.lt/ns/Events#">
+    <owl:Ontology rdf:about="http://semantika.lt/ns/Talkings">
+        <owl:versionIRI rdf:resource="http://semantika.lt/ns/Talkings"/>
+        <owl:imports rdf:resource="http://semantika.lt/ns/Events"/>
+        <dc:contributor xml:lang="en">Kaunas University of Technology, Department of Information Systems</dc:contributor>
+        <terms:title xml:lang="lt">Kalbėjimų ontologija</terms:title>
+        <terms:title xml:lang="en">Talkings Ontology</terms:title>
+        <vann:preferredNamespacePrefix>talkings</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://semantika.lt/ns/Talkings</vann:preferredNamespaceUri>
+        <rdfs:isDefinedBy xml:lang="en">http://www.semantika.lt/ontology/Talkings_schema.rdf</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked__substance -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked__substance">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Events#substance"/>
+        <rdfs:label xml:lang="lt">kalbėjime pasakė turinį</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talked__talking -->
+
+    <owl:ObjectProperty rdf:about="http://semantika.lt/ns/Talkings#talked__talking">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Agents#agent"/>
+        <rdfs:range rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:label xml:lang="lt">asmuo pasakė kalbėjimą</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#year -->
+
+    <owl:DatatypeProperty rdf:about="http://semantika.lt/ns/Talkings#year">
+        <rdfs:domain rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#agreement -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#agreement">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#avowal -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#avowal">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#comment -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#comment">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#complaint -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#complaint">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#confirmation -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#confirmation">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#decision -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#decision">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#defensive -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#defensive">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dictate -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#dictate">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#dispute -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#dispute">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#doubt -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#doubt">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emotional_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#emotional_talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#emphasis -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#emphasis">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#falsehood -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#falsehood">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#fast_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#fast_talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#irony -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#irony">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#mention -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#mention">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#negation -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#negation">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#notification -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#notification">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#obligation -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#obligation">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#other -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#other">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#persuasion -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#persuasion">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#plead -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#plead">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#polite_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#polite_talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#prediction -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#prediction">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#promise -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#promise">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#question -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#question">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reasoning -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#reasoning">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#referral -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#referral">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#refusal -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#refusal">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#regret -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#regret">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#reply -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#reply">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#request -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#request">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#saying -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#saying">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#slow_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#slow_talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#statement -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#statement">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#stormy_saying -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#stormy_saying">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#suggestion -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#suggestion">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#supplement -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#supplement">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Events#event"/>
+        <rdfs:label xml:lang="lt">kalbėjimas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#thanks -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#thanks">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#unknown_talking -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#unknown_talking">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semantika.lt/ns/Talkings#warning -->
+
+    <owl:Class rdf:about="http://semantika.lt/ns/Talkings#warning">
+        <rdfs:subClassOf rdf:resource="http://semantika.lt/ns/Talkings#talking"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#end_moment">
+        <rdfs:label xml:lang="lt">pabaigos momentas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#start_moment">
+        <rdfs:label xml:lang="lt">pradžios momentas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semantika.lt/ns/Events#time_moment">
+        <rdfs:label xml:lang="lt">laiko momentas</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

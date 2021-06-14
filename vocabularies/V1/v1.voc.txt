@@ -1,0 +1,39 @@
+talking_type
+	General_concept: event_type
+talking has talking_type
+	General_concept: state_of_affairs has state_of_affairs_type
+talking_manner
+	General_concept: event_type
+talking has talking_manner
+	General_concept: state_of_affairs has state_of_affairs_type
+
+
+// agreement
+agent agreed substance
+	General_concept: agent talked substance
+	Definition: agent talked talking that talked substance and has talking_type Agreement_talking_type
+
+// confirmation
+agent confirmed substance
+	General_concept: agent talked substance
+	Definition: agent talked talking that talked substance and has talking_type Confirmation_talking_type
+
+// request
+agent requested substance
+	General_concept: agent talked substance
+	Definition: agent talked talking that talked substance and has talking_type Request_talking_type
+
+// emotional talking
+agent talked_emotionally substance
+	General_concept: agent talked substance
+	Definition: agent talked talking that talked substance and has talking_manner Emotional_talking_manner
+
+// fast talking
+agent talked_fast substance
+	General_concept: agent talked substance
+	Definition: agent talked talking that talked substance and has talking_manner Fast_talking_manner
+
+// polite talking
+agent talked_politely substance
+	General_concept: agent talked substance
+	Definition: agent talked talking that talked substance and has talking_manner Polite_talking_manner

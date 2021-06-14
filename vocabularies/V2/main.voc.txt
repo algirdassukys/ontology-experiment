@@ -1,0 +1,19 @@
+document
+object
+agent
+  General_concept: object
+person
+  General_concept: agent
+state_of_affairs
+  General_concept: object
+event
+  General_concept: state_of_affairs
+talking
+  General_concept: event
+substance
+  General_concept: object
+state_of_affairs_type
+event_type
+  General_concept: state_of_affairs_type
+object is_referred_in document
+agent talked talking
